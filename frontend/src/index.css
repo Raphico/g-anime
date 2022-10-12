@@ -1,0 +1,414 @@
+*
+{
+  box-sizing: border-box;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root
+{
+  --dominant-color: #e7dfdd;
+  --complementary-color: #0e0b16;
+  --accent-color:  #4717f6;
+}
+
+.dark-theme
+{
+  --dominant-color: #0e0b16;
+  --complementary-color: #e7dfdd;
+}
+
+body
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: var(--dominant-color);
+  color: var(--complementary-color);
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.flex
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark
+{
+  color: #0e0b16;
+}
+
+.light
+{
+  color: #e7dfdd;
+}
+
+.blue
+{
+  color: #4717f6;
+}
+
+.text-center
+{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.my
+{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container
+{
+  width: 95%;
+  margin: auto;
+  max-width: 800px;
+}
+
+.header
+{
+  background-color: var(--accent-color);
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.logo
+{
+  font-size: 15px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.menu.flex
+{
+  gap: 10px;
+}
+
+.about
+{
+  width: 50%;
+  font-size: 20px;
+}
+
+.content
+{
+  padding-bottom: 50px;
+}
+
+.heading
+{
+  font-size: 30px;
+}
+
+
+.form,
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background: var(--accent-color);
+  color: #e7dfdd;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover
+{
+  opacity: 0.9
+}
+
+.btn:active
+{
+  transform: scale(0.9);
+}
+
+.login-option
+{
+  text-align: center;
+  font-size: 20px;
+}
+
+.login
+{
+  text-align: left;
+  font-size: 15px;
+}
+
+.loggedIcon
+{
+  margin: 0 10px;
+}
+
+.search
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+.search form
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  border: 1px solid #e7dfdd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #e7dfdd;
+}
+
+.search input
+{
+  width: 70%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 15px;
+}
+
+.loadingSpinnerContainer 
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner 
+{
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin 
+{
+  0% 
+  {
+    transform: rotate(0deg);
+  }
+  100% 
+  {
+    transform: rotate(360deg);
+  }
+}
+
+.anime-container
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 50px 0;
+}
+
+.anime
+{
+  color: var(--complementary-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  height: inherit;
+  overflow: auto;
+}
+
+.anime img
+{
+  width: 100%;
+  height: 50%;
+}
+
+.title
+{
+  font-weight: 700;
+  padding-left: 5px;
+}
+
+.anime .btn
+{
+  margin-left: 10px;
+}
+
+.anime .genres
+{
+  padding-left: 5px;
+}
+
+.anime .flex
+{
+  padding: 0 10px;
+  padding-bottom: 20px;
+}
+
+.anime-info
+{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  background-color: var(--dominant-color);
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.anime-info .content
+{
+  height: 100vh;
+  padding: 50px 10px;
+}
+
+.anime-info .close
+{
+  position: relative;
+  left: 100%;
+  color: var(--complementary-color);
+}
+
+.anime-info .synopsis
+{
+  padding-bottom: 20px;
+}
+
+.page
+{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.like
+{
+  border: 0;
+  background-color: transparent;
+}
+
+.like:hover
+{
+  opacity: 0.9;
+}
+
+.like:active
+{
+  transform: scale(0.9);
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  .about
+  {
+    width: 70%;
+  }
+  .form, .content
+  {
+    width: 100%;
+  }
+  .header .logo
+  {
+    font-size: 13px;
+  }
+  .search form
+  {
+    width: 80%;
+    padding: 5px;
+  }
+  .anime-container
+  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .anime 
+  {
+    height: auto;
+  }
+  .anime-info .flex
+  {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .anime-info .close
+  {
+    position: relative;
+    left: 0;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .anime-container
+  {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .anime
+  {
+    height: auto;
+  }
+  .anime img
+  {
+    height: 60%;
+  }
+}
