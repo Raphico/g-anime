@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/user';
+const API_URL = '/api/user/';
 
 const registerUser = async(userData: Object) => 
 {
@@ -28,7 +28,7 @@ const logoutUser = async() =>
 
 const loginUser = async(userData: Object) =>
 {
-  const res = await fetch(`${API_URL}/login`, {
+  const res = await fetch(`${API_URL}login`, {
     method: 'POST',
     body: JSON.stringify(userData),
     headers: {
@@ -48,7 +48,7 @@ const loginUser = async(userData: Object) =>
 
 const loginViaSecurityQuestion = async(userData: Object) =>
 {
-  const res = await fetch(`${API_URL}/login-security-question`, {
+  const res = await fetch(`${API_URL}login-security-question`, {
     method: 'POST',
     body: JSON.stringify(userData),
     headers: {

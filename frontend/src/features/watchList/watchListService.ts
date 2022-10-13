@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/watchList'
+const API_URL = '/api/watchList/'
 
 const getWatchList = async(token: String | undefined) =>
 {
@@ -43,7 +43,7 @@ const addToWatchList = async(anime: Number, token: String | undefined) =>
 
 const delWatchList = async(id: String, token: String | undefined) =>
 {
-  const res = await fetch(`${API_URL}/${id}`, {
+  const res = await fetch(`${API_URL}${id}`, {
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${token}`
