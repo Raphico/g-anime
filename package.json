@@ -4,9 +4,7 @@
   "description": "Browse anime, and add your favorites to a watch list",
   "main": "./backend/server.js",
   "scripts": {
-    "start": "node ./backend/server.js",
-    "server": "nodemon ./backend/server.js",
-    "client": "npm start --prefix frontend"
+    "start": "node ./backend/server.js"
   },
   "author": "Raphael",
   "license": "ISC",
