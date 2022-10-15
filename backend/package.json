@@ -2,9 +2,9 @@
   "name": "G-anime",
   "version": "1.0.0",
   "description": "Browse anime, and add your favorites to a watch list",
-  "main": "./backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./backend/server.js"
+    "start": "node server.js"
   },
   "author": "Raphael",
   "license": "ISC",
