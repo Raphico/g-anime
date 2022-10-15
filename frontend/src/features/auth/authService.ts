@@ -1,4 +1,4 @@
-const API_URL = '/api/user/';
+const API_URL = 'https://g-anime.onrender.com/api/user/';
 
 const registerUser = async(userData: Object) => 
 {

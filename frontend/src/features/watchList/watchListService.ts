@@ -1,4 +1,4 @@
-const API_URL = '/api/watchList/'
+const API_URL = 'https://g-anime.onrender.com/api/watchList/'
 
 const getWatchList = async(token: String | undefined) =>
 {
